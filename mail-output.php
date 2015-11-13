@@ -57,11 +57,11 @@
             }
 
             body,#bodyTable{
-                background-color:#CCCCCC;
+                background-color:#eee;
             }
 
             #bodyCell{
-                border-top:4px solid #FFFFFF;
+                border-top:4px solid #fff;
             }
 
             #templateContainer{
@@ -245,8 +245,7 @@
                 font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
                 font-size:12px;
                 line-height:150%;
-                padding-left:20px;
-                padding-right:20px;
+                padding:20px;
                 text-align:left;
             }
             
@@ -500,9 +499,8 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="intro">
-                                                                        <p>Hi {{lead.First Name}},<br>
-                                                                           <div data-id="INTRO-TEXT"></div>
-                                                                        </p>
+                                                                        Hi {{lead.First Name}},<br>
+                                                                        <div data-id="INTRO-TEXT"></div>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -582,14 +580,15 @@
                                         <tr>
                                             <td> 
                                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            
+                                                    <tr>
+
                                                         <?php
                                                             // Start the first count at 0 outside the loop.
                                                             $count = 1;
                                                             // Start the second count at 0 outside the loop.
                                                             $second_count = 0;
                                                             // Arrays normally start at 0 so the count starts at 0 for good practice.
-                                                            while($count <= 20) {
+                                                            while($count <= 6) {
                                                             // loop though until count is equal or less than 3
                                                             // Plus one to the counter each loop
                                                             $count++;
@@ -606,13 +605,11 @@
                                                                     $sep = '';
                                                                 }
                                                                    if ($count % 2 == 0) {
-                                                                       echo '</tr><tr>';
+                                                                       echo '';
 
                                                                    }
                                                             ?>
-
-                                                    <tr>
-
+                                                    
                                                         <td align="center" valign="top" class="templateColumnContainer" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                 <tr>
@@ -672,6 +669,9 @@
                                                             </table>
                                                         </td>
 -->
+                                                     <?php echo $sep;
+                                                            } ?>
+                                
                                                     </tr>
                                                 </table>
                                             </td>
@@ -679,8 +679,7 @@
                                     </table>
                                 </td>
                             </tr>
-                            <?php echo $sep;
-                                    } ?>
+                           
 
                             <tr class='last-1'>
                                 <td height="20" bgcolor="#FFFFFF"></td>
