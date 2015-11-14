@@ -135,7 +135,7 @@ $(document).ready(function(){
             buildItYou(this);
         });
 
-    $( "input[name=check]" )
+    $( "input[name=pre-order]" )
         .on('change',function() {
             updateButtons(this);
         });

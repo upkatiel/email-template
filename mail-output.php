@@ -560,7 +560,7 @@
                                                                         </tr>
                                                                     </table>
                                                                     <a class="PRODUCT-URL-1" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-1">
-                                                                        <img id="IMAGE-URL-1" data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
+                                                                        <img data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -599,7 +599,6 @@
                                                                     $class = 'rightColumnContent';
                                                                     if ($count > 5) {
                                                                         $style = 'display:none';
-                                                                        $style = '';
                                                                     } else {
                                                                         $style = '';
                                                                     }
@@ -611,9 +610,8 @@
                                                                }
                                                             ?>
                                                     
-                                                        <td align="center" valign="top" class="templateColumnContainer" class="show-box box-<?php echo $count?>" 
-                                                            <?php if ($count > 3) { echo 'style="display:none"'; }?>>
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <td align="center" valign="top" class="templateColumnContainer">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
                                                                         <a href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
@@ -623,23 +621,21 @@
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>" style="padding-left:20px;">
                                                                        <h1><div data-id="PRODUCT-TITLE-<?php echo $count?>"></div></h1>
-                                                                            <p><div data-id="PRODUCT-SYNOPSIS-<?php echo $count?>"></div></p>
+                                                                            <div data-id="PRODUCT-SYNOPSIS-<?php echo $count?>"></div>
                                                                             <table>
                                                                                 <?php while($second_count <= 2) {
-                                                                                     // loop though until count is equal or less than 6
-                                                                                     // Plus one to the counter each loop
-                                                                                     $second_count++;
-                                                                                     ?>
-                                                                                     <tr><td>
-                                                                                        <h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
-                                                                                     </td></tr>
-                                                                                     <?php
+                                                                                     $second_count++; ?>
+                                                                                     <tr>
+                                                                                         <td>
+                                                                                            <h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
+                                                                                         </td>
+                                                                                    </tr>
+                                                                                <?php
                                                                                  }
-                                                                                 // Reset the counter to 0 or it will never loop again after the first 6.
                                                                                  $second_count = 0; ?>
                                                                             </table>
                                                                             <a href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
-                                                                                <img id="IMAGE-URL-<?php echo $count?>" data-id="PRE-ORDER-2" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
+                                                                                <img data-id="PRE-ORDER-2" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
