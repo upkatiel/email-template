@@ -112,8 +112,8 @@ function updateButtons(obj) {
 
 $(document).ready(function(){
     $("#mainHTML").load('mail-output.php');
+    $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
     currentDate = ( moment().format('DDMMYYYY') );
-       $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
     
     $( ".producturl" )
         .on('change',function() {

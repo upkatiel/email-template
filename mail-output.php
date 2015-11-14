@@ -560,7 +560,7 @@
                                                                         </tr>
                                                                     </table>
                                                                     <a class="PRODUCT-URL-1" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-1">
-                                                                        <img data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
+                                                                        <img id="IMAGE-URL-1" data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
                                                                     </a>
                                                                 </td>
                                                             </tr>
@@ -599,15 +599,16 @@
                                                                     $class = 'rightColumnContent';
                                                                     if ($count > 5) {
                                                                         $style = 'display:none';
+                                                                        $style = '';
                                                                     } else {
                                                                         $style = '';
                                                                     }
                                                                     $sep = '';
                                                                 }
-                                                                   if ($count % 2 == 0) {
-                                                                       echo '';
+                                                                if ($count % 2 == 0) {
+                                                                   echo '</tr><tr>';
 
-                                                                   }
+                                                               }
                                                             ?>
                                                     
                                                         <td align="center" valign="top" class="templateColumnContainer" class="show-box box-<?php echo $count?>" 
@@ -638,36 +639,12 @@
                                                                                  $second_count = 0; ?>
                                                                             </table>
                                                                             <a href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
-                                                                                <img data-id="PRE-ORDER-2" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
+                                                                                <img id="IMAGE-URL-<?php echo $count?>" data-id="PRE-ORDER-2" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
                                                         </td>
-<!--
-                                                        <td align="center" valign="top" class="templateColumnContainer">
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                <tr>
-                                                                    <td align="center" class="rightColumnContent">
-                                                                        <a href="http://www.BRAND.DOMAIN/Search/Results?term=<PRODUCT-TITLE-<?php echo $count?>>">
-                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-0<?php echo $count?>-STORE-DATE.jpg" style="display:block; max-width:300px;" class="columnImage" alt="<PRODUCT-TITLE-<?php echo $count?>>" /></a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td align="center" class="rightColumnContent" style="padding-left:20px;">
-                                                                        <h1><div data-id="PRODUCT-TITLE-<?php echo $count?>"></div></h1>
-                                                                            <p><div data-id="PRODUCT-SYNOPSIS-<?php echo $count?>"></div></p>
-                                                                            <table>
-                                                                                <tr><td><h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2></td></tr>
-                                                                                <tr><td><h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2></td></tr>
-                                                                                <tr><td><h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2></td></tr>
-                                                                            </table>
-                                                                            <a href="http://www.BRAND.DOMAIN/Search/Results?term=<PRODUCT-TITLE-<?php echo $count?>>">
-                                                                                <img data-id="PRE-ORDER-<PRODUCT-TITLE-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
--->
+                                            
                                                      <?php echo $sep;
                                                             } ?>
                                 

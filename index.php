@@ -67,13 +67,13 @@
                 // Start the second count at 0 outside the loop.
                 $second_count = 0;
                 // Arrays normally start at 0 so the count starts at 0 for good practice.
-                while($count <= 3) {
+                while($count <= 20) {
                     // loop though until count is equal or less than 3
                     // Plus one to the counter each loop
                     $count++;
                 ?>
                 
-                <div class="box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"' ; }?>>
+                <div class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"' ; }?>>
                     <a class="expander" data-expander-target=".content-<?php echo $count?>" href="#"><h2 class="product-box">Product <?php echo $count?></h2></a>
                     <div class="content-<?php echo $count?> mui-panel">
                         <div class="mui-textfield">
@@ -138,7 +138,7 @@
             <button class="mui-btn mui-btn--primary add-another">Add More</button>
             <button class="mui-btn mui-btn--primary remove">Remove</button>
 
-            <div style="clear:both;padding-top:50px;">
+            <div class="tools">
                 <h2>Toools</h2>
                 <button class="mui-btn mui-btn--primary" onclick="goLinks();">Remove Links</button>
                 <button class="mui-btn mui-btn--primary" onclick="goAlt();">Remove Alt</button>
