@@ -9,9 +9,10 @@
         <script src="src/minified/jquery.gsap.min.js"></script>
         <script src="src/simple-expand.min.js"></script>
         <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="//cdn.muicss.com/mui-0.2.1/css/mui.min.css" rel="stylesheet" type="text/css" />
         <script src="//cdn.muicss.com/mui-0.2.1/js/mui.min.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        
     </head>
     <body>
         <div class="newsletter-tool">
@@ -46,7 +47,7 @@
                     </div>
 
                     <button class="mui-btn mui-btn--primary" id="get-html">Get HTML</button>
-                    <button class="mui-btn mui-btn--primary" onclick="saveMe();">Save HTML</button>
+                    <button class="mui-btn mui-btn--primary" id="save-html">Save HTML</button>
 
                     <div class="mui-textfield">
                         <input type="text" id="pre_header" size="60" value placeholder="Pre-header" data-id="PRE-HEADER" />
@@ -73,23 +74,23 @@
                 ?>
                 
                 <div class="box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"' ; }?>>
-                    <a class="expander" data-expander-target=".content-<?php echo $count?>" href="#"><h2>Product <?php echo $count?></h2></a>
+                    <a class="expander" data-expander-target=".content-<?php echo $count?>" href="#"><h2 class="product-box">Product <?php echo $count?></h2></a>
                     <div class="content-<?php echo $count?> mui-panel">
                         <div class="mui-textfield">
-                            <input type="text" id="product_title-1" class="product-title" size="60" value placeholder="Product Title" data-id="PRODUCT-TITLE-<?php echo $count?>" />
+                            <input type="text" class="product-title" size="60" value placeholder="Product Title" data-id="PRODUCT-TITLE-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">
-                            <input type="text" id="product_synopsis-1" size="60" value placeholder="Product Synopsis" data-id="PRODUCT-SYNOPSIS-<?php echo $count?>" />
+                            <input type="text" size="60" value placeholder="Product Synopsis" data-id="PRODUCT-SYNOPSIS-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">    
-                            <input type="text" id="image_url-1" size="60" class="image" value placeholder="Image URL" data-id="IMAGE-URL-<?php echo $count?>" />
+                            <input type="text" size="60" class="image" value placeholder="Image URL" data-id="IMAGE-URL-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">
-                            <input type="text" id="product_url-1" size="60" value placeholder="Product URL" data-id="PRODUCT-URL-<?php echo $count?>" />
+                            <input type="text" size="60" class="producturl"  value placeholder="Product URL" data-id="PRODUCT-URL-<?php echo $count?>" />
                         </div>
                         <div class="mui-checkbox">
                             <label>
-                                <input type="checkbox" name="check" id="pre-order-1" value placeholder="Pre-order" data-id="PRE-ORDER-<?php echo $count?>" />
+                                <input type="checkbox" name="pre-order" id="pre-order-1" value placeholder="Pre-order" data-id="PRE-ORDER-<?php echo $count?>" />
                                 Pre-order
                             </label>
                         </div>

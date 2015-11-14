@@ -12,8 +12,38 @@ function downloadInnerHtml(filename, elId, mimeType) {
     link.click(); 
 }
 
-function saveMe() {
+$('#save-html').click(function() {
     downloadInnerHtml(fileName, 'mainHTML','text/html');
+});
+                      
+                      
+CKEDITOR.replace('quine');
+    
+$('#get-html').click(function() {
+  var html = $('#mainHTML').html();
+    html_array =  removeHidden(html);
+  var html = $('#mainHTML').html();
+
+    $('#cke_quine').css('display' , 'block');
+    if (!$(this).hasClass('html-showing')) {
+        $('.cke_button__source').click();
+        $(this).addClass('html-showing');
+    }
+    CKEDITOR.instances['quine'].setData(html);
+    $('#mainHTML').html( html_array);
+        $('html, body').animate({
+            scrollTop: $("#cke_quine").offset().top
+        }, 2000);
+}); 
+
+function removeHidden(html) {
+    html_array = [];
+    html_array.push(html);
+    get_hidden = $('#bodyTable td:hidden');
+    get_hidden.each(function(){
+        $(this).parent().remove();
+    });
+    return html_array[0];
 };
 
 //<![CDATA[

@@ -597,7 +597,7 @@
                                                                     $sep = '';
                                                                 } else {
                                                                     $class = 'rightColumnContent';
-                                                                    if ($count > 3) {
+                                                                    if ($count > 5) {
                                                                         $style = 'display:none';
                                                                     } else {
                                                                         $style = '';

@@ -1,8 +1,9 @@
-var productArray = ["hmv-ie", "hmv", "ie", "&euro;"];
+var productArray = ["hmv-ie", "hmv", "ie", "&euro;"]
 var tagArray = ["STORE", "BRAND", "DOMAIN", "CURRENCY"];
 var currentDate;
 var findme;
 var replaceit;
+var val;
 
 
 function changeSrc(e){
@@ -13,6 +14,15 @@ function changeSrc(e){
     $('#IMAGE-URL-' + i).attr('alt', val);
     $('.PRODUCT-URL-' + i).attr('href', 'http://www.BRAND.DOMAIN/Search/Results?term=' + val.replace(" ", "+"));
 }
+
+function changeLink(e){
+    val = e.val();
+    get_index = e.data('id');
+    array = get_index.split('-');
+    i = array[2];
+    $('.PRODUCT-URL-' + i).attr('href', val);
+}
+
 function changeImg(e){
     val = e.val();
     get_index = e.data('id');
@@ -20,6 +30,7 @@ function changeImg(e){
     i = array[2];
     $('#IMAGE-URL-' + i).attr('src', val);
 }
+
 function buildItYou(obj) {
 
     console.log('changed');
@@ -98,43 +109,17 @@ function updateButtons(obj) {
         $('[data-id="'+replaceData+'"]').prop('src', function () { return this.src.replace('pre-order','buy-now'); });
     }
 }
-function removeHidden(html) {
-    html_array = [];
-    html_array.push(html);
-    get_hidden = $('#bodyTable td:hidden');
-    get_hidden.each(function(){
-        $(this).parent().remove();
-    });
-    return html_array[0];
-}
+
 $(document).ready(function(){
     $("#mainHTML").load('mail-output.php');
     currentDate = ( moment().format('DDMMYYYY') );
-    CKEDITOR.replace('quine');
+       $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
     
-    $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
-    
-    $('#get-html').click(function() {
-      var html = $('#mainHTML').html();
-        html_array =  removeHidden(html);
-      var html = $('#mainHTML').html();
-
-        $('#cke_quine').css('display' , 'block');
-        if (!$(this).hasClass('html-showing')) {
-            $('.cke_button__source').click();
-            $(this).addClass('html-showing');
-        }
-        CKEDITOR.instances['quine'].setData(html);
-        $('#mainHTML').html( html_array);
-            $('html, body').animate({
-                scrollTop: $("#cke_quine").offset().top
-            }, 2000);
-    });
-
-    $( ".product-title" )
+    $( ".producturl" )
         .on('change',function() {
-            changeSrc($(this));
+            changeLink($(this));
         });
+    
     $( ".image" )
         .on('change',function() {
             changeImg($(this));
