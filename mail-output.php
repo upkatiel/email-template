@@ -588,7 +588,7 @@
                                                             // Start the second count at 0 outside the loop.
                                                             $second_count = 0;
                                                             // Arrays normally start at 0 so the count starts at 0 for good practice.
-                                                            while($count <= 6) {
+                                                            while($count <= 20) {
                                                             // loop though until count is equal or less than 3
                                                             // Plus one to the counter each loop
                                                             $count++;
@@ -610,12 +610,13 @@
                                                                    }
                                                             ?>
                                                     
-                                                        <td align="center" valign="top" class="templateColumnContainer" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>
+                                                        <td align="center" valign="top" class="templateColumnContainer" class="show-box box-<?php echo $count?>" 
+                                                            <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
                                                                         <a href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
-                                                                            <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-02-STORE-DATE.jpg" style="display:block; max-width:300px;" class="columnImage" alt="PRODUCT-TITLE-<?php echo $count?>" /></a>
+                                                                            <img id="IMAGE-URL-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-02-STORE-DATE.jpg" style="display:block; max-width:300px;" width="280" class="columnImage" alt="PRODUCT-TITLE-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -623,16 +624,14 @@
                                                                        <h1><div data-id="PRODUCT-TITLE-<?php echo $count?>"></div></h1>
                                                                             <p><div data-id="PRODUCT-SYNOPSIS-<?php echo $count?>"></div></p>
                                                                             <table>
-                                                                                <?php   while($second_count <= 2) {
+                                                                                <?php while($second_count <= 2) {
                                                                                      // loop though until count is equal or less than 6
                                                                                      // Plus one to the counter each loop
                                                                                      $second_count++;
                                                                                      ?>
-                                                                                     <tr>
-                                                                                         <td>
-                                                                                             <h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
-                                                                                         </td>
-                                                                                     </tr>
+                                                                                     <tr><td>
+                                                                                        <h2><span data-id="PRODUCT-PRICE-<?php echo $count?>-<?php echo $second_count?>"></span><span style="font-size:14px" data-id="FORMAT-<?php echo $count?>-<?php echo $second_count?>"></span></h2>
+                                                                                     </td></tr>
                                                                                      <?php
                                                                                  }
                                                                                  // Reset the counter to 0 or it will never loop again after the first 6.

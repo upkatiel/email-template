@@ -1,5 +1,4 @@
 var productArray = ["hmv-ie", "hmv", "ie", "&euro;"];
-//var tagArray = [/STORE/g,/BRAND/g,/DOMAIN/g,/CURRENCY/g];
 var tagArray = ["STORE", "BRAND", "DOMAIN", "CURRENCY"];
 var currentDate;
 var findme;
@@ -27,9 +26,11 @@ function buildItYou(obj) {
     if($(obj).val() == "") return;
     var text = $(obj).val(); 
     var replaceData = $(obj).data("id");
+    
     if (!replaceData.indexOf('PRODUCT-PRICE')) {
         text = productArray[3] + text + "&nbsp;";
     };
+    
     if (!replaceData.indexOf('IMAGE-URL')) {
         $(this).attr('src' ,text);
     } else {
@@ -110,6 +111,9 @@ $(document).ready(function(){
     $("#mainHTML").load('mail-output.php');
     currentDate = ( moment().format('DDMMYYYY') );
     CKEDITOR.replace('quine');
+    
+    $('.expander').simpleexpand({'hideMode': 'fadeToggle'});
+    
     $('#get-html').click(function() {
       var html = $('#mainHTML').html();
         html_array =  removeHidden(html);
