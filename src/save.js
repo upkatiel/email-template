@@ -1,12 +1,14 @@
 function downloadInnerHtml(filename, elId, mimeType) {
 
-    var elHtml = document.getElementById(elId).innerHTML;
-    var html_array =  removeHidden(elHtml);
+    var html = $('#mainHTML').html();
+    html_array1 =  removeHidden(html);
+    var html = $('#mainHTML').html();
+    
     var link = document.createElement('a');
     mimeType = mimeType || 'text/plain';
 
     link.setAttribute('download', filename);
-    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(html_array));
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(html));
     link.click(); 
 }
 
@@ -41,7 +43,7 @@ $('.get-html').click(function() {
 function removeHidden(html) {
     html_array = [];
     html_array.push(html);
-    get_hidden = $('#bodyTable td:hidden');
+    get_hidden = $('#bodyTable table:hidden');
     get_hidden.each(function(){
         $(this).parent().remove();
     });
