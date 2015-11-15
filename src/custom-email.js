@@ -5,7 +5,6 @@ var findme;
 var replaceit;
 var val;
 
-
 function changeSrc(e){
     val = e.val();
     get_index = e.data('id');
@@ -37,6 +36,11 @@ function buildItYou(obj) {
     if($(obj).val() == "") return;
     var text = $(obj).val(); 
     var replaceData = $(obj).data("id");
+    
+    if (!replaceData.indexOf('PRODUCT-TITLE')) {
+        $('img').prop('alt', function () { return this.alt.replace(replaceData,text); });
+        $('a').prop('href', function () { return this.href.replace(replaceData,text); });
+    };
     
     if (!replaceData.indexOf('PRODUCT-PRICE')) {
         text = productArray[3] + text + "&nbsp;";

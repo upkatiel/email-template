@@ -9,10 +9,10 @@
         <script src="src/minified/jquery.gsap.min.js"></script>
         <script src="src/simple-expand.min.js"></script>
         <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
-        <link href="//cdn.muicss.com/mui-0.2.1/css/mui.min.css" rel="stylesheet" type="text/css" />
-        <script src="//cdn.muicss.com/mui-0.2.1/js/mui.min.js"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="src/mui.min.js"></script>
         
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="newsletter-tool">
@@ -46,9 +46,6 @@
                         </label>
                     </div>
 
-                    <button class="mui-btn mui-btn--primary" id="get-html">Get HTML</button>
-                    <button class="mui-btn mui-btn--primary" id="save-html">Save HTML</button>
-
                     <div class="mui-textfield">
                         <input type="text" id="pre_header" size="60" value placeholder="Pre-header" data-id="PRE-HEADER" />
                     </div>
@@ -59,6 +56,14 @@
                         <input type="text" id="title_text" size="60" value placeholder="Title Text" data-id="TITLE-TEXT" />
                     </div>
                 </form>
+                 <div style="padding-top:20px;display:inline-block;">Number of Products: <span id="number-of-products">3</span></div>
+                 <div class="site-links">
+                     <a href="http://www.hmv.ie" target="_blank">hmv</a>
+                     <a href="http://www.xtravision.co.uk" target="_blank">xtravision.co.uk</a>
+                     <a href="http://www.xtravision.ie" target="_blank">xtravision.ie</a>
+                     <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
+                     <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
+                </div>
             </div>
             <div class="forms">
                 <?php
@@ -137,6 +142,9 @@
 
             <button class="mui-btn mui-btn--primary add-another">Add More</button>
             <button class="mui-btn mui-btn--primary remove">Remove</button>
+            
+            <button class="mui-btn mui-btn--primary get-html">Get HTML</button>
+            <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
 
             <div class="tools">
                 <h2>Toools</h2>

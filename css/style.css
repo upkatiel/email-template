@@ -4,8 +4,17 @@ body {
 }
 
 .tools{
-    clear:both;
-    padding-top:50px;
+    clear: both;
+    padding-top: 50px;
+}
+
+.site-links{
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.site-links a{
+    padding-left: 20px;
 }
 
 .product-box{

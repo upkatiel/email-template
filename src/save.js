@@ -1,27 +1,29 @@
-var currentDate = (moment().format('DDMMYYYY') );
-var store = $('input[name=store]:checked', '#formy').val();
-var fileName = 'newsletter-' + store + currentDate + '.html';
-
 function downloadInnerHtml(filename, elId, mimeType) {
+
     var elHtml = document.getElementById(elId).innerHTML;
+    var html_array =  removeHidden(elHtml);
     var link = document.createElement('a');
     mimeType = mimeType || 'text/plain';
 
     link.setAttribute('download', filename);
-    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(html_array));
     link.click(); 
 }
 
-$('#save-html').click(function() {
+$('.save-html').click(function() {
+    var currentDate = (moment().format('DDMMYYYY') );
+    var storeFilename = $('input[name=store]:checked', '#formy').val();
+    var fileName = 'newsletter-' + storeFilename + "-" + currentDate + '.html';
     downloadInnerHtml(fileName, 'mainHTML','text/html');
 });
                       
-                      
-CKEDITOR.replace('quine');
-    
-$('#get-html').click(function() {
+$(document).ready(function(){
+    CKEDITOR.replace('quine');
+});
+
+$('.get-html').click(function() {
   var html = $('#mainHTML').html();
-    html_array =  removeHidden(html);
+    html_array1 =  removeHidden(html);
   var html = $('#mainHTML').html();
 
     $('#cke_quine').css('display' , 'block');
@@ -30,7 +32,7 @@ $('#get-html').click(function() {
         $(this).addClass('html-showing');
     }
     CKEDITOR.instances['quine'].setData(html);
-    $('#mainHTML').html( html_array);
+    $('#mainHTML').html( html_array1);
         $('html, body').animate({
             scrollTop: $("#cke_quine").offset().top
         }, 2000);
