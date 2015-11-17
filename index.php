@@ -23,27 +23,27 @@
                 <form id="formy" class="mui-form--inline">
                     <div class="mui-radio store">
                         <label>
-                            <input type="radio" name="store" value="hmv-ie" data-id="hmv">hmv
+                            <input type="radio" id="hmv-ie" name="store" value="hmv-ie" data-id="hmv">hmv
                         </label>
                     </div>
                     <div class="mui-radio store">
                         <label>
-                            <input type="radio" name="store" value="xv-ie" data-id="Xtra-vision">Xtra-vision IE
+                            <input type="radio" id="xv-ie" name="store" value="xv-ie" data-id="Xtra-vision">Xtra-vision IE
                         </label>
                     </div>
                     <div class="mui-radio store">
                         <label>
-                            <input type="radio" name="store" value="xv-uk" data-id="Xtra-vision">Xtra-vision UK
+                            <input type="radio" id="xv-uk" name="store" value="xv-uk" data-id="Xtra-vision">Xtra-vision UK
                         </label>
                     </div>
                     <div class="mui-radio store">
                         <label>
-                            <input type="radio" name="store" value="xvm-ie" data-id="Xtra-vision Marketplace">XVM IE
+                            <input type="radio" id="xvm-ie" name="store" value="xvm-ie" data-id="Xtra-vision Marketplace">XVM IE
                         </label>
                     </div>
                     <div class="mui-radio store">
                         <label>
-                            <input type="radio" name="store" value="xvm-uk" data-id="Xtra-vision Marketplace">XVM UK
+                            <input type="radio" id="xvm-uk" name="store" value="xvm-uk" data-id="Xtra-vision Marketplace">XVM UK
                         </label>
                     </div>
 
@@ -83,20 +83,20 @@
                     <a class="expander" data-expander-target=".content-<?php echo $count?>" href="#"><h2 class="product-box">Product <?php echo $count?></h2></a>
                     <div class="content-<?php echo $count?> mui-panel">
                         <div class="mui-textfield">
-                            <input type="text" class="product-title" size="60" value placeholder="Product Title" data-id="PRODUCT-TITLE-<?php echo $count?>" />
+                            <input type="text" id="product-title-<?php echo $count?>" class="product-title" size="60" value placeholder="Product Title" data-id="PRODUCT-TITLE-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">
-                            <input type="text" size="60" value placeholder="Product Synopsis" data-id="PRODUCT-SYNOPSIS-<?php echo $count?>" />
+                            <input type="text" size="60" id="product-synopsis-<?php echo $count?>" value placeholder="Product Synopsis" data-id="PRODUCT-SYNOPSIS-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">    
-                            <input type="text" size="60" class="image" value placeholder="Image URL" data-id="IMAGE-URL-<?php echo $count?>" />
+                            <input type="text" size="60" id="image-url-<?php echo $count?>" class="image" value placeholder="Image URL" data-id="IMAGE-URL-<?php echo $count?>" />
                         </div>
                         <div class="mui-textfield">
-                            <input type="text" size="60" class="producturl"  value placeholder="Product URL" data-id="PRODUCT-URL-<?php echo $count?>" />
+                            <input type="text" size="60" id="product-url-<?php echo $count?>" class="producturl"  value placeholder="Product URL" data-id="PRODUCT-URL-<?php echo $count?>" />
                         </div>
                         <div class="mui-checkbox">
                             <label>
-                                <input type="checkbox" name="pre-order" id="pre-order-1" value placeholder="Pre-order" data-id="PRE-ORDER-<?php echo $count?>" />
+                                <input type="checkbox" name="pre-order" id="pre-order-<?php echo $count?>" value placeholder="Pre-order" data-id="PRE-ORDER-<?php echo $count?>" />
                                 Pre-order
                             </label>
                         </div>
@@ -145,8 +145,8 @@
             <button class="mui-btn mui-btn--primary remove">Remove</button>
             <button class="mui-btn mui-btn--primary get-html">Get HTML</button>
             <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
-            <button class="mui-btn mui-btn--primary save-it">Save</button>
-            <button class="mui-btn mui-btn--primary load-it">Load</button>
+            <button class="mui-btn mui-btn--primary load-it">Load Cookie</button>
+            <button class="mui-btn mui-btn--primary clear-it">Clear Cookie</button>
 
             <div class="tools">
                 <h2>Toools</h2>

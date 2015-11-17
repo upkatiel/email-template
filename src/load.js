@@ -1,8 +1,18 @@
 $('.load-it').click(function() {
-    var x = parseInt($('#number-of-products').html(), 10);
     
-    $('#pre_header').val(Cookies.get('pre_header'));
-    // need a way to cycle through cookies array.
-    //try a Cookies.get();
-    console.log(Cookies.get());
+    //console.log(Cookies.get());
+    
+    $('input').each(function(k , v) {
+        $(this).val(Cookies.get($(this).attr('id')));
+    });
+    
+    $('input').each(function(k , v) {
+        $(this).change();
+    });
+    
+});
+
+
+$('.clear-it').click(function() {
+    Cookies.remove();
 });

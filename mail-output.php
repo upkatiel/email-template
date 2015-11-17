@@ -493,7 +493,7 @@
                                                             <table border="0" cellpadding="0" cellspacing="0">
                                                                 <tr>
                                                                     <td class="headerContent">
-                                                                        <a href="http://www.BRAND.DOMAIN">
+                                                                        <a href="http://www.BRANDDOMAIN">
                                                                             <img src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-header.gif" style="display:block; max-width:600px;" class="headerImage" alt="BRAND" /></a>
                                                                     </td>
                                                                 </tr>
@@ -527,7 +527,7 @@
                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" class="leftColumnContent">
-                                                                    <a class="PRODUCT-URL-1" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-1">
+                                                                    <a class="PRODUCT-URL-1" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-1">
                                                                         <img id="IMAGE-URL-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-01-STORE-DATE.jpg" style="display:block; max-width:280px;" width="280" class="columnImage" alt="PRODUCT-TITLE-1" />
                                                                     </a>
                                                                 </td>
@@ -559,7 +559,7 @@
                                                                             </td>
                                                                         </tr>
                                                                     </table>
-                                                                    <a class="PRODUCT-URL-1" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-1">
+                                                                    <a class="PRODUCT-URL-1" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-1">
                                                                         <img data-id="PRE-ORDER-1" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-1 Now" />
                                                                     </a>
                                                                 </td>
@@ -614,7 +614,7 @@
                                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="show-box box-<?php echo $count?>" <?php if ($count > 3) { echo 'style="display:none"'; }?>>
                                                                 <tr>
                                                                     <td align="center" class="<?php echo $class?>">
-                                                                        <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
+                                                                        <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
                                                                             <img id="IMAGE-URL-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/product-02-STORE-DATE.jpg" style="display:block; max-width:280px;" width="280" class="columnImage" alt="PRODUCT-TITLE-<?php echo $count?>" /></a>
                                                                     </td>
                                                                 </tr>
@@ -634,7 +634,7 @@
                                                                                  }
                                                                                  $second_count = 0; ?>
                                                                             </table>
-                                                                            <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRAND.DOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
+                                                                            <a class="PRODUCT-URL-<?php echo $count?>" href="http://www.BRANDDOMAIN/Search/Results?term=PRODUCT-TITLE-<?php echo $count?>">
                                                                                 <img data-id="PRE-ORDER-<?php echo $count?>" src="http://eu-lon04.marketo.com/rs/092-VBX-009/images/BRAND-buy-now.gif" style="display:block;" class="buybutton" alt="Buy PRODUCT-TITLE-<?php echo $count?> Now" /></a>
                                                                     </td>
                                                                 </tr>

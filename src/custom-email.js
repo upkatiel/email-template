@@ -34,7 +34,10 @@ function changeImg(e){
 
 function buildItYou(obj) {
 
-    console.log('changed');
+    //console.log('changed');
+    
+    Cookies.set($(this).attr('id'), $(this).val());
+    
     if($(obj).val() == "") return;
     var text = $(obj).val(); 
     var replaceData = $(obj).data("id");
@@ -63,27 +66,27 @@ function storeChange(obj) {
     if (store == "hmv-ie") {
         productArray.push("hmv-ie");
         productArray.push("hmv");
-        productArray.push("ie");
+        productArray.push(".ie");
         productArray.push("&euro;");
     } else if (store == "xv-ie") {
         productArray.push("xv-ie");
         productArray.push("Xtra-vision");
-        productArray.push("ie");
+        productArray.push(".ie");
         productArray.push("&euro;");
     } else if (store == "xv-uk") {
         productArray.push("xv-uk");
         productArray.push("Xtra-vision");
-        productArray.push("co.uk");
+        productArray.push(".co.uk");
         productArray.push("&pound;");
     } else if (store == "xvm-ie") {
         productArray.push("xvm-ie");
         productArray.push("XVMarketplace");
-        productArray.push("ie");
+        productArray.push(".ie");
         productArray.push("&euro;");
     } else if (store == "xvm-uk") {
         productArray.push("xvm-uk");
         productArray.push("XVMarketplace");
-        productArray.push("co.uk");
+        productArray.push(".co.uk");
         productArray.push("&pound;");
     }
     $('img').prop('src', function () { return this.src.replace(tagArray[0],productArray[0]); });
@@ -123,13 +126,11 @@ $(document).ready(function(){
     
     $( ".producturl" )
         .on('change',function() {
-            Cookies.set($(this).attr('id'), $(this).val());
             changeLink($(this));
         });
     
     $( ".image" )
         .on('change',function() {
-            Cookies.set($(this).attr('id'), $(this).val());
             changeImg($(this));
         });
 
@@ -141,8 +142,7 @@ $(document).ready(function(){
     $( "select , input" )
         .on('change',function() {
             buildItYou(this);
-            Cookies.set($(this).attr('id'), $(this).val());
-            console.log('id: ' + $(this).attr('id') + ' - val: ' + $(this).val())
+            //console.log('id: ' + $(this).attr('id') + ' - val: ' + $(this).val())
         });
 
     $( "input[name=pre-order]" )
