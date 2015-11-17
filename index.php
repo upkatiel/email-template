@@ -11,6 +11,7 @@
         <script src="//cdn.ckeditor.com/4.5.4/standard/ckeditor.js"></script>
         <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
         <script src="src/mui.min.js"></script>
+        <script src="src/js.cookie.js"></script>
         
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
@@ -59,8 +60,8 @@
                  <div style="padding-top:20px;display:inline-block;">Number of Products: <span id="number-of-products">3</span></div>
                  <div class="site-links">
                      <a href="http://www.hmv.ie" target="_blank">hmv</a>
-                     <a href="http://www.xtravision.co.uk" target="_blank">xtravision.co.uk</a>
-                     <a href="http://www.xtravision.ie" target="_blank">xtravision.ie</a>
+                     <a href="http://www.xtra-vision.co.uk" target="_blank">xtra-vision.co.uk</a>
+                     <a href="http://www.xtra-vision.ie" target="_blank">xtra-vision.ie</a>
                      <a href="http://www.xvmarketplace.co.uk" target="_blank">xvm.co.uk</a>
                      <a href="http://www.xvmarketplace.ie" target="_blank">xvm.ie</a>
                 </div>
@@ -142,9 +143,10 @@
 
             <button class="mui-btn mui-btn--primary add-another">Add More</button>
             <button class="mui-btn mui-btn--primary remove">Remove</button>
-            
             <button class="mui-btn mui-btn--primary get-html">Get HTML</button>
             <button class="mui-btn mui-btn--primary save-html">Save HTML</button>
+            <button class="mui-btn mui-btn--primary save-it">Save</button>
+            <button class="mui-btn mui-btn--primary load-it">Load</button>
 
             <div class="tools">
                 <h2>Toools</h2>
@@ -160,7 +162,9 @@
         <script src="src/moment.min.js"></script>
         <script src="src/custom-email.js"></script>
         <script src="src/tools.js"></script>
+        <script src="src/save-html.js"></script>
         <script src="src/save.js"></script>
+        <script src="src/load.js"></script>
         <script src="src/add-more.js"></script>
         
     </body>

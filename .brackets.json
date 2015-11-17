@@ -1,0 +1,10 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/wamp/www/email-template/src/uncompressed/TweenMax.js",
+        "C:/wamp/www/email-template/src/uncompressed/TweenLite.js",
+        "C:/wamp/www/email-template/src/uncompressed/TimelineMax.js",
+        "C:/wamp/www/email-template/src/uncompressed/TimelineLite.js",
+        "C:/wamp/www/email-template/src/save-html.js",
+        "C:/wamp/www/email-template/src/load.js"
+    ]
+}

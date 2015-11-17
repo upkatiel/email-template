@@ -28,6 +28,8 @@ function changeImg(e){
     array = get_index.split('-');
     i = array[2];
     $('#IMAGE-URL-' + i).attr('src', val);
+    
+    //todo - check width and add img atrib width="280" if greater
 }
 
 function buildItYou(obj) {
@@ -121,11 +123,13 @@ $(document).ready(function(){
     
     $( ".producturl" )
         .on('change',function() {
+            Cookies.set($(this).attr('id'), $(this).val());
             changeLink($(this));
         });
     
     $( ".image" )
         .on('change',function() {
+            Cookies.set($(this).attr('id'), $(this).val());
             changeImg($(this));
         });
 
@@ -137,6 +141,8 @@ $(document).ready(function(){
     $( "select , input" )
         .on('change',function() {
             buildItYou(this);
+            Cookies.set($(this).attr('id'), $(this).val());
+            console.log('id: ' + $(this).attr('id') + ' - val: ' + $(this).val())
         });
 
     $( "input[name=pre-order]" )
